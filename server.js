@@ -10,8 +10,10 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Routes
 const patientRoutes = require("./routes/patient.routes");
 const doctorRoutes = require("./routes/doctor.routes");
+const nurseRoutes = require("./routes/nurse.routes");
 app.use("/api", patientRoutes);
 app.use("/api",doctorRoutes)
+app.use("/api",nurseRoutes)
 // Connect to the database
 db.sequelize.sync().then(() => {
   console.log("Connected to the database.");

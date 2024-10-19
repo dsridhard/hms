@@ -20,5 +20,6 @@ db.sequelize = sequelize;
 // Import models
 db.patient = require("./patient.model.js")(sequelize, Sequelize);
 db.doctor = require("./doctor.model.js")(sequelize, Sequelize);
-
+db.nurse=require("./nurse.model.js")(sequelize, Sequelize);
+db.admin=require("./admin.model.js")(sequelize, Sequelize);
 module.exports = db;
